@@ -1,0 +1,13 @@
+#:kivy 1.0.9
+#:import Image kivy.core.image.Image
+<Block>:
+    ans: 0
+    now: 0
+    size: 100, 100
+    pos: 50+(root.now%4)*100, 400-int(root.now/4)*100
+    canvas:
+        Rectangle:
+            pos:self.pos
+            size:self.size
+            texture:Image('./images/chino.png').texture.get_region((root.ans%4)*100, 300-int(root.ans/4)*100, 100, 100)if root.ans!=15 else None
+<Game>:

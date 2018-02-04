@@ -1,0 +1,1 @@
+{"dist_name": "mypuzzle", "recipes": ["hostpython3crystax", "sdl2_image", "sdl2_mixer", "sdl2_ttf", "python3crystax", "sdl2", "six", "pyjnius", "kivy"], "bootstrap": "sdl2_gradle", "archs": ["armeabi-v7a"]}

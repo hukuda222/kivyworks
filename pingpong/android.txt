@@ -1,0 +1,3 @@
+title=Touchtracer
+author=hukuda222
+orientation=landscape
