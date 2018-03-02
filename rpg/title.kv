@@ -1,0 +1,11 @@
+#:kivy 1.0.9
+#:import Image kivy.core.image.Image
+<Title>:
+    BoxLayout:
+        Button:
+            text: 'Goto Game'
+            on_press:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'mapwalk'
+        Button:
+            text: 'Quit'

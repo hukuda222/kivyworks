@@ -1,0 +1,95 @@
+#:kivy 1.0.9
+#:import Image kivy.core.image.Image
+<Setting>:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 0.6, .1
+        pos_hint: {'x': 0, 'y': .9}
+        Button:
+            size_hint: .1, 1
+            text: 'back'
+            on_release: root.manager.current = 'mapwalk'
+        Button:
+            size_hint: .1, 1
+            text: 'a'
+            #on_release: root.open()
+        Button:
+            size_hint: .1, 1
+            text: 'b'
+            #on_release: root.save()
+        Button:
+            size_hint: .1, 1
+            text: 'c'
+            #on_release: root.save()
+    Button:
+        id:cond0
+        size_hint: .2, .1
+        text:'select'
+        font_size:'20sp'
+        pos_hint: {'x': .05, 'y': .75}
+    BoxLayout:
+        pos_hint: {'x': 0, 'y': .6}
+        orientation: 'horizontal'
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+    Button:
+        id:cond1
+        text:"select"
+        size_hint: .2, .1
+        font_size:'20sp'
+        pos_hint: {'x': .05, 'y': .45}
+    BoxLayout:
+        orientation: 'horizontal'
+        pos_hint: {'x': 0, 'y': .3}
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+    Label:
+        size_hint: .1, .1
+        text:"default"
+        font_size:'30sp'
+        pos_hint: {'x': .1, 'y': .15}
+    BoxLayout:
+        orientation: 'horizontal'
+        pos_hint: {'x': 0, 'y': 0}
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)
+        Slider:
+            size_hint: .1, .1
+            min_size:0
+            max_size:100
+            on_touch_up:root.put(self.value)

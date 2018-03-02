@@ -1,0 +1,13 @@
+#:kivy 1.0.9
+#:import Image kivy.core.image.Image
+<Enemy>:
+    ipos:-1,-1
+    window_height:0 if root.parent is None else root.parent.top
+    size: int(root.window_height/10), int(root.window_height/10)
+    pos: int(root.window_height/20) + root.ipos[0] * int(root.window_height/10), 8*int(root.window_height/10) - (root.ipos[1] * int(root.window_height/10))
+    canvas:
+        Color:
+            rgb: (.15, .50, .95)
+        Rectangle:
+            pos: self.pos
+            size: self.size

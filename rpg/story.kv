@@ -1,0 +1,35 @@
+#:kivy 1.0.9
+#:import Image kivy.core.image.Image
+<Story>:
+    field:field
+    log:log
+    FloatLayout:
+        id : field
+        pos_hint:{'x':.1*root.top/root.width,'y':.1}
+        size_hint:(0.8*root.top/root.width,0.8)
+        canvas:
+            Color:
+                rgb: (.95, .50, .25)
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        FloatLayout:
+            pos_hint:{'x':.1,'y':.05}
+            size_hint:(.8,.3)
+            canvas:
+                Color:
+                    rgb: (.9, .9, .6)
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Label:
+                id:log
+                padding_x:0
+                pos_hint:{'x':.05,'y':.1}
+                size_hint:(.8,.8)
+                text_size: self.size
+                font_size:cm(0.8)
+                color:(1,0,1,1)
+                halign: 'left'
+                valign: 'top'
+                line_height:1
